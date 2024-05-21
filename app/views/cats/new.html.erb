@@ -1,0 +1,18 @@
+<h1>Please provide the details of the cat you found</h1>
+
+<%= form_with model: @cat do |f| %>
+  <div class="mb-3">
+    <%= f.label :legs, "Number of legs", class: "form-label" %>
+    <%= f.select :legs, [0, 1, 2, 3, 4], {}, class: "form-select" %>
+  </div>
+
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+  <%= f.label :gender %>
+  <%= f.text_field :gender %>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <%= f.label :image_url %>
+  <%= f.text_field :image_url %>
+  <%= f.submit "Save", class: "btn btn-primary" %>
+<% end %>
